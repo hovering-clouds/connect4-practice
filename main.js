@@ -1,12 +1,22 @@
 import { createBoard, playMove } from "./connect4.js";
 
+function getWebSocketServer() {
+  if (window.location.host === "hovering-clouds.github.io") {
+    return "wss://connect4-practice.herokuapp.com/";
+  } else if (window.location.host === "localhost:8000") {
+    return "ws://localhost:8001/";
+  } else {
+    throw new Error(`Unsupported host: ${window.location.host}`);
+  }
+}
+
 // initialization
 window.addEventListener("DOMContentLoaded", () => {
   // Initialize the UI.
   const board = document.querySelector(".board");
   createBoard(board);
   // Open the WebSocket connection and register event handlers.
-  const websocket = new WebSocket("ws://192.168.43.244:8001/");
+  const websocket = new WebSocket(getWebSocketServer());
   initGame(websocket);
   receiveMoves(board, websocket);
   sendMoves(board, websocket);
