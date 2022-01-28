@@ -50,9 +50,9 @@ function receiveMoves(board, websocket) {
       case "init":
         // Create link for inviting the second player.
         document.querySelector(".join").href = "?join=" + event.join;
-        document.querySelector(".join_token").textContent = "Join token:"+window.location.host+"?join=" + event.join;
+        document.querySelector(".join_token").textContent = "Join token:"+window.location.href+"?join=" + event.join;
         document.querySelector(".watch").href = "?watch=" + event.watch;
-        document.querySelector(".watch_token").textContent = "Watch token:"+window.location.host+"?watch="+event.watch;
+        document.querySelector(".watch_token").textContent = "Watch token:"+window.location.href+"?watch="+event.watch;
         break;
       case "play":
         // Update the UI with the move.
