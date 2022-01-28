@@ -6,25 +6,30 @@
   </head>
   <body>
     <h1>Connect4</h1>
-    <h2>游戏规则:</h2>
-    <ol>
-      <li>由两位棋手，一方持红色棋子，另一方持黄色棋子在棋盘上进行对弈。持红色棋子者为先手方，持黄色棋子者为后手方。</li>
-      <li>双方必须轮流把一枚己方棋子投入开口，让棋子因地心引力落在底部或其它棋子上。</li>
-      <li>当己方的四枚以上的棋子以纵、横、斜方向连成一线时则获胜，反之则失败。</li>
-      <li>棋盘满棋时，无任何同色棋子四子连一线，则平手（或者双方都同意平手，则平手）。</li>
-    </ol>
-    <h2>联机说明:</h2>
-    <p>
-      进入新游戏默认为先手，页面底部有'加入'和'观看'两个选项，可以将旁边的链接发送给好友，打开此链接加入/观看对局，
-      <br>或者点击Join/Watch，在自己浏览器新建标签页加入对局，除房间创建者外，其他人无法看见页面底部链接
-    </p>
-    <div class="actions">
-      <a class="action join" href="">Join</a>
-      <div class="join_token"></div>
-      <a class="action watch" href="">Watch</a>
-      <div class="watch_token"></div>
+    <div class="explain">
+      <h2>游戏规则:</h2>
+      <ol>
+        <li>由两位棋手，一方持红色棋子，另一方持黄色棋子在棋盘上进行对弈。持红色棋子者为先手方，持黄色棋子者为后手方。</li>
+        <li>双方必须轮流把一枚己方棋子投入开口，让棋子因地心引力落在底部或其它棋子上。</li>
+        <li>当己方的四枚以上的棋子以纵、横、斜方向连成一线时则获胜，反之则失败。</li>
+        <li>棋盘满棋时，无任何同色棋子四子连一线，则平手（或者双方都同意平手，则平手）。</li>
+      </ol>
+      <h2>联机说明:</h2>
+      <p>
+        进入新游戏默认为先手，页面底部有'加入'和'观看'两个选项，可以将旁边的链接发送给好友，打开此链接加入/观看对局，
+        <br>或者点击Join/Watch，在自己浏览器新建标签页加入对局，除房间创建者外，其他人无法看见页面底部链接
+      </p>
     </div>
-    <div class="board"></div>
+    
+    <div class="gameBoard">
+      <div class="actions">
+        <a class="action join" href="">Join</a>
+        <div class="join_token"></div>
+        <a class="action watch" href="">Watch</a>
+        <div class="watch_token"></div>
+      </div>
+      <div class="board"></div>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
